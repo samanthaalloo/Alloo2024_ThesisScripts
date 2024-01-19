@@ -34,14 +34,14 @@ def kspace_alloo(image_shape: tuple, pixel_size: float = 1):
     # wavelength: wavelength of X-ray beam [microns]
     # prop: propagation distance, that ism between the sample and detector [microns]
     # pixel_size: pixel size of the detector [microns]
-os.chdir(r'C:\Users\sal167\Alloo_PhDResearch\Thesis\PythonScripts\MIST_Attenuation&SlowlyVarying\DATA_WattleFlower_25keV_2m_SBPCXI') # Put the directory where the 'Wattle Flower' data is here
+os.chdir(r'\MIST_Attenuation&SlowlyVarying\DATA_WattleFlower_25keV_2m_SBPCXI') # Put the directory where the 'Wattle Flower' data is here
 num_masks = 15
 gamma = 1403 # Ratio of real to imaginary components of the sample's refractive index
 wavelength = 4.959*10**-5 # [microns]
 prop = 2*10**6 # [microns]
 pixel_size = 9.9 # [microns]
 
-savedir = r'C:\Users\sal167\Alloo_PhDResearch\Thesis\PythonScripts\MIST_Attenuation&SlowlyVarying\DATA_WattleFlower_25keV_2m_SBPCXI\TEST' # Place the directory you want to save the images to here
+savedir = r'\DATA_WattleFlower_25keV_2m_SBPCXI\TEST' # Place the directory you want to save the images to here
 # Ensure the reference-speckle and sample-reference-speckle images are
 # imported into numpy arrays. An example of such important can be found below
 xleft = 29 # Establishing the desired cropping: For the Wattle Flower data this crops out the image headers, which is required
