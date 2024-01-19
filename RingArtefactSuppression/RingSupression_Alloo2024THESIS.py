@@ -149,9 +149,9 @@ def CropAboutCOR(image):
 # ------------------------------------------------------------------
 # ------------------------------------------------------------------
 # Reading in the image
-directory = r'C:\Users\sal167\Alloo_PhDResearch\Thesis\PythonScripts\RingArtefactSuppression' # directory with CT in it that you want to ring supress - this address can be gotten from file explorer.
+directory = r'RingArtefactSuppression' # directory with CT in it that you want to ring supress - this address can be gotten from file explorer.
 imagename = 'slice0250.tif' # CT filename
-savedir = r'C:\Users\sal167\Alloo_PhDResearch\Thesis\PythonScripts\RingArtefactSuppression\TEST' # directory you want to save images too
+savedir = r'\RingArtefactSuppression\TEST' # directory you want to save images too
 
 os.chdir(directory) # this command changes the working directory to where your data is, it says, "python please look for the following data here"
 ring_CT_uncrop = np.double(np.asarray(Image.open(imagename))) # reads in the tiff image and then converts it to a double precise array
