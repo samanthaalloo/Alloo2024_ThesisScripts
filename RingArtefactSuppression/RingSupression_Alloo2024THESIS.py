@@ -47,15 +47,19 @@ def SuperGauss(amplitude, shift, width, power, x):
 # ------------------------------------------------------------------
 def RectMask(FSimage,height, DistFromCOR,GFstndDev,heightCOR,fromCOR):
     # ------------------------------------------------------------------
-    # This function is the rectangular filter that is used to suppress fourier-space frquencies
+    # This function is the rectangular filter that is used to suppress fourier-space frequencies
     # ------------------------------------------------------------------
     # DEFINITIONS:
-    # FSimage: the fourier transform of the polar coordinate CT reconstruction (as np array)
-    # height: is how many rows, above and below v = 0 line, you want the rectangle to be
-    # DistFromCOR: is how many pixels from the COR (in the u direction), you want the rectangles to
+    # FSimage: the Fourier transform of the polar coordinate CT reconstruction (as np array)
+    # height: is how many rows, above and below v = 0 line, you want the bigger rectangle to be
+    # DistFromCOR: is how many pixels from the Fourier-space origin (in the +u direction) you want the bigger rectangles to
     #              start. This is to ensure the main DC component is not cancelled out too
-    # FDstndDev: Standard deviation of Gaussian Filter post-applied to the mask if you want to reduce harsh
+    # GFstndDev: Standard deviation of Gaussian Filter post-applied to the mask if you want to reduce harsh
     #            cut-off frequencies
+    # heightCOR: is how many rows above and below the v=0 line you want the smaller rectangle closer to the Fourier- 
+    #            space origin to be
+    # fromCOR: is how many pixels from the Fourier-space origin (in the +u direction) you want the smaller 
+    #            rectangle to be
     # ------------------------------------------------------------------
     # ------------------------------------------------------------------
     frow = FSimage.shape[0] # Number of rows in Fourier Space Image
